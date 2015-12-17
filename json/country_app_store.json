@@ -1,0 +1,62 @@
+[
+	{
+		"keyword" : "ar",
+		"country" : "Argentina"
+	},
+	{
+		"keyword" : "au",
+		"country" : "Australia"
+	},
+	{
+		"keyword" : "at",
+		"country" : "Austria (Österreich)"
+	},
+	{
+		"keyword" : "be",
+		"country" : "Belgium (België)"
+	},
+	{
+		"keyword" : "br",
+		"country" : "Brazil (Brasil)"
+	},
+	{
+		"keyword" : "ca",
+		"country" : "Canada"
+	},
+	{
+		"keyword" : "fr",
+		"country" : "France"
+	},
+	{
+		"keyword" : "de",
+		"country" : "Germany (Deutschland)"
+	},
+	{
+		"keyword" : "hk",
+		"country" : "Hong Kong (香港)"
+	},
+	{
+		"keyword" : "in",
+		"country" : "India"
+	},
+	{
+		"keyword" : "id",
+		"country" : "Indonesia"
+	},
+	{
+		"keyword" : "it",
+		"country" : "Italy (Italia)"
+	},
+	{
+		"keyword" : "it",
+		"country" : "Japan (日本)"
+	},
+	{
+		"keyword" : "ko",
+		"country" : "Korea (한국)"
+	},
+	{
+		"keyword" : "my",
+		"country" : "Malaysia"
+	}
+]

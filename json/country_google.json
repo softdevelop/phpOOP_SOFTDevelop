@@ -1,0 +1,183 @@
+
+		[
+				{
+					"keyword" : "ad",
+					"country" : "Andorra (google.ad)"
+				},
+				{
+					"keyword" : "ae",
+					"country" : "United Arab Emirates (google.ae)"
+				},
+				{
+					"keyword" : "al",
+					"country" : "Albania (google.al)"
+				},
+				{
+					"keyword" : "am",
+					"country" : "Armenia (google.am)"
+				},
+				{
+					"keyword" : "as",
+					"country" : "American Samoa (google.as)"
+				},
+				{
+					"keyword" : "at",
+					"country" : "Austria (google.at)"
+				},
+				{
+					"keyword" : "az",
+					"country" : "Azerbaijan (google.az)"
+				},
+				{
+					"keyword" : "ba",
+					"country" : "Bosnia and Herzegovina (google.ba)"
+				},
+				{
+					"keyword" : "be",
+					"country" : "Belgium (google.be)"
+				},
+				{
+					"keyword" : "bf",
+					"country" : "Burkina Faso (google.bf)"
+				},
+				{	
+					"keyword" : "bg",
+					"country" : "Bulgaria (google.bg)"
+				},
+				{	
+					"keyword" : "bi",
+					"country" : "Burundi (google.bi)"
+				},
+				{	
+					"keyword" : "bj",
+					"country" : "Benin (google.bj)"
+				},
+				{	
+					"keyword" : "bs",
+					"country" : "Bahamas (google.bs)"
+				},
+				{	
+					"keyword" : "bt",
+					"country" : "Bhutan (google.bt)"
+				},
+				{	
+					"keyword" : "by",
+					"country" : "Belarus (google.by)"
+				},
+				{	
+					"keyword" : "ca",
+					"country" : "Canada (google.ca)"
+				},
+				{	
+					"keyword" : "cat",
+					"country" : "Catalan Countries (google.cat)"
+				},
+				{	
+					"keyword" : "cd",
+					"country" : "Democratic Republic of the Congo (google.cd)"
+				},
+				{	
+					"keyword" : "cf",
+					"country" : "Central African Republic (google.cf)"
+				},
+				{	
+					"keyword" : "cg",
+					"country" : "Republic of the Congo (google.cg)"
+				},
+				{	
+					"keyword" : "ch",
+					"country" : "Switzerland (google.ch)"
+				},
+				{	
+					"keyword" : "ci",
+					"country" : "Ivory Coast (google.ci)"
+				},
+				{	
+					"keyword" : "cl",
+					"country" : "Chile (google.cl)"
+				},
+				{	
+					"keyword" : "cm",
+					"country" : "Cameroon (google.cm)"
+				},
+				{	
+					"keyword" : "cn",
+					"country" : "China (google.cn)"
+				},
+				{	
+					"keyword" : "ao",
+					"country" : "Angola (google.co.ao)"
+				},
+				{	
+					"keyword" : "bw",
+					"country" : "Botswana (google.co.bw)"
+				},
+				{	
+					"keyword" : "ck",
+					"country" : "Cook Islands (google.co.ck)"
+				},
+				{	
+					"keyword" : "cr",
+					"country" : "Costa Rica (google.co.cr)"
+				},
+				{	
+					"keyword" : "id",
+					"country" : "Indonesia (google.co.id)"
+				},
+				{	
+					"keyword" : "il",
+					"country" : "Israel (google.co.il)"
+				},
+				{	
+					"keyword" : "in",
+					"country" : "India (google.co.in)"
+				},
+				{	
+					"keyword" : "jp",
+					"country" : "Japan (google.co.jp)"
+				},
+				{	
+					"keyword" : "ke",
+					"country" : "Kenya (google.co.ke)"
+				},
+				{	
+					"keyword" : "kr",
+					"country" : "South Korea (google.co.kr)"
+				},
+				{	
+					"keyword" : "ls",
+					"country" : "Lesotho (google.co.ls)"
+				},
+				{	
+					"keyword" : "ma",
+					"country" : "Morocco (google.co.ma)"
+				},
+				{	
+					"keyword" : "mz",
+					"country" : "Mozambique (google.co.mz)"
+				},
+				{	
+					"keyword" : "nz",
+					"country" : "New Zealand (google.co.nz)"
+				},
+				{	
+					"keyword" : "th",
+					"country" : "Thailand (google.co.th)"
+				},
+				{	
+					"keyword" : "tz",
+					"country" : "Tanzania (google.co.tz)"
+				},
+				{	
+					"keyword" : "ug",
+					"country" : "Uganda (google.co.ug)"
+				},
+				{	
+					"keyword" : "uk",
+					"country" : "United Kingdom (google.co.uk)"
+				},
+				{	
+					"keyword" : "uz",
+					"country" : "Uzbekistan (google.co.uz)"
+				}
+		]

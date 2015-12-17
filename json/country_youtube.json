@@ -1,0 +1,82 @@
+[
+	{
+		"keyword" : "af",
+		"country" : "Afghanistan (افغانستان)"
+	},
+				{
+		"keyword" : "al",
+		"country" : "Albania (Shqipëria)"
+	},
+				{
+		"keyword" : "dz",
+		"country" : "Algeria (الجزائر)"
+	},
+				{
+		"keyword" : "as",
+		"country" : "American Samoa (Amerika Sāmoa)"
+	},
+				{
+		"keyword" : "ad",
+		"country" : "Andorra"
+	},
+				{
+		"keyword" : "ao",
+		"country" : "Angola"
+	},
+				{
+		"keyword" : "ai",
+		"country" : "Anguilla"
+	},
+				{
+		"keyword" : "aq",
+		"country" : "Antarctica"
+	},
+				{
+		"keyword" : "ag",
+		"country" : "Antigua and Barbuda"
+	},
+				{
+		"keyword" : "ar",
+		"country" : "Argentina"
+	},
+				{
+		"keyword" : "am",
+		"country" : "Armenia (Hayastán)"
+	},
+				{
+		"keyword" : "aw",
+		"country" : "Aruba"
+	},
+				{
+		"keyword" : "au",
+		"country" : "Australia"
+	},
+				{
+		"keyword" : "at",
+		"country" : "Austria (Österreich)"
+	},
+				{
+		"keyword" : "az",
+		"country" : "Azerbaijan (Azərbaycan)"
+	},
+				{
+		"keyword" : "bs",
+		"country" : "Bahamas"
+	},
+				{
+		"keyword" : "bh",
+		"country" : "Bahrain (البحرين)"
+	},
+				{
+		"keyword" : "bd",
+		"country" : "Bangladesh (বাংলাদেশ)"
+	},
+				{
+		"keyword" : "bb",
+		"country" : "Barbados"
+	},
+				{
+		"keyword" : "by",
+		"country" : "Belarus (Беларусь)"
+	}
+]

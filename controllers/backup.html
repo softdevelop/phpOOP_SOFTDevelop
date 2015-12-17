@@ -1,0 +1,146 @@
+<?php
+class save_search_controller extends main_controller
+{
+	//public $components = array('SimpleImage');
+	public function index() 
+	{
+		// $students = new student_model();
+		// $records = $students->getAllRecords();
+		//include_once "views/".$this->controller."/".$this->action.".php";
+		
+		// $this->setProperty('records',$records);
+
+		$this->display();
+	} 
+	public function country() 
+	{
+
+		$provider = $_GET["provider"];
+		// if( $provider == "goolge") {
+
+		// }
+		if($provider == "goolge") {
+			$string = file_get_contents("json/country_google.json");
+		}
+		if($provider == "youtube") {
+			$string = file_get_contents("json/country_youtube.json");
+		}
+		if($provider == "bing") {
+			$string = file_get_contents("json/country_bing.json");
+		}
+		if($provider == "app_store") {
+			$string = file_get_contents("json/country_app_store.json");
+		}
+		$json_a = json_decode($string, TRUE);
+		echo json_encode($json_a);
+		exit();
+		
+	}
+	public function language() 
+	{
+		$provider = $_GET["provider"];
+		if($provider == "goolge") {
+			$string = file_get_contents("json/language_google.json");
+		}
+		if($provider == "youtube") {
+			$string = file_get_contents("json/language_youtube.json");
+		}
+		if($provider == "bing") {
+			$string = file_get_contents("json/language_bing.json");
+		}
+		if($provider == "app_store") {
+			$string = file_get_contents("json/language_app_store.json");
+		}
+		$json_a = json_decode($string, TRUE);
+		echo json_encode($json_a);
+		exit();
+		
+	}
+	public function search($keyword){
+		
+		$string = file_get_contents("json/google.json");
+
+		$json_a = json_decode($string, TRUE);
+
+		$data = array(); 
+		$i = 0;
+
+		foreach ($json_a['results'] as $key => $value) {
+			if (strpos($value[0]["string"],$keyword) !== false){
+
+				$data[$i] = $value[0];
+				$i = $i + 1;
+			}
+		}
+	 	return $data;
+	}
+	public function add() 
+	{
+		$savesearch = new save_search_model();
+		$record = $savesearch->check($_GET['keyword']);
+		if($record){
+			echo "<pre>"; var_dump("chuc mung"); echo "<br/>"; die('123');
+		}else{
+			echo "<pre>"; var_dump("con met"); echo "<br/>"; die('123');
+		}
+		if(isset($_GET['keyword'])) {
+			$arrData = $this->search($_GET['keyword']);
+			$savesearchData['keyword'] = $_GET['keyword'];
+			$savesearchData['data'] = json_encode($arrData);
+			$savesearchData['provider'] = $_GET['provider'];
+			$savesearchData['country'] = $_GET['country'];
+			$savesearchData['language'] = $_GET['lng'];
+			$savesearchData['date'] = date('Y-m-d H:i:s');;
+			if(!empty($savesearchData['keyword']))  {
+				$savesearch = new save_search_model();
+				if($savesearch->addRecord($savesearchData)) {
+					$this->setProperty('arrData',$arrData);
+				}
+			}
+		}
+		$options['act'] = 'index';
+		$this->display($options);
+	}
+
+	public function edit($id) 
+	{
+		$student = new student_model();
+		$record = $student->getRecord($id);
+		$this->setProperty('record',$record);
+		if(isset($_POST['btn_submit'])) {
+			$studentData = $_POST['data'][$this->controller];
+			if(!empty($studentData['fullname']))  {
+				if(isset($_FILES) and $_FILES["image"]["name"]) {
+					if(file_exists(RootURI."/media/upload/" .$this->controller.'/'.$record['photo']))
+						unlink(RootURI."/media/upload/" .$this->controller.'/'.$record['photo']);
+					$studentData['photo'] = $this->uploadImg($_FILES);
+				}
+				if($student->editRecord($id, $studentData))
+					header( "Location: ".html_helpers::url(array('ctl'=>'students')));
+			}
+		}
+		$this->display();
+	}
+	
+	public function view($id) 
+	{
+		$student = new student_model();
+		$record = $student->getRecord($id);
+		$this->setProperty('record',$record);
+		$this->display();
+	}
+	
+	public function del($id) 
+	{
+		$student = new student_model();
+		$record = $student->getRecord($id);
+		if(file_exists(RootURI."/media/upload/" .$this->controller.'/'.$record['photo']))
+			unlink(RootURI."/media/upload/" .$this->controller.'/'.$record['photo']);
+			
+		echo $student->delRecord($id);
+		exit();
+		//$student->delRecord($id);
+		//header( "Location: ".html_helpers::url(array('ctl'=>'students')));
+	}
+}
+?>
