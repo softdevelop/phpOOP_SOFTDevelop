@@ -41,50 +41,7 @@ class main_controller {
 		include_once "views/".$options['ctl']."/".$options['act'].".php";
 	}
 
-	public function uploadImg($flies, $newSize=null) {
-		$t=time();
-		$allowedExts = array("gif", "jpeg", "jpg", "png");
-		$temp = explode(".", $flies["image"]["name"]);
-		$extension = end($temp);
-		if ((($flies["image"]["type"] == "image/gif")
-			|| ($flies["image"]["type"] == "image/jpeg")
-			|| ($flies["image"]["type"] == "image/jpg")
-			|| ($flies["image"]["type"] == "image/pjpeg")
-			|| ($flies["image"]["type"] == "image/x-png")
-			|| ($flies["image"]["type"] == "image/png"))
-			&& ($flies["image"]["size"] < 200000000)
-			&& in_array($extension, $allowedExts))
-		{
-			if ($flies["image"]["error"] > 0) {
-				//var_dump($flies["image"]["error"]);
-				echo 'error';
-				return false;
-		    }
-			$ulfd = RootURI."/media/upload/" .$this->controller.'/';
-			$newfn = time().rand(10000,99999).'.'.$extension;
-		    if (file_exists($ulfd . $newfn)) {
-		      	return true;
-		    } else {
-		        move_uploaded_file($flies["image"]["tmp_name"], $ulfd.$newfn);
-				$SimpleImg = new SimpleImage_Component();
-				$SimpleImg->load($ulfd.$newfn);
-				if(isset($newSize['height']) && !isset($newSize['width'])) {
-					$SimpleImg->resizeToHeight($newW);
-				} else {
-					$newW = 200;
-					if(isset($newSize['width'])) {
-						$newW = $newSize['width'];
-					}
-					$SimpleImg->resizeToWidth($newW);
-				}
-				$SimpleImg->save($ulfd.$newfn);
-				return $newfn;
-		    }
-		} else {
-			echo "Invalid file";
-			return false;
-		}
-	}
+	
 	
     public function setProperty($name, $value) {
         $this->$name = $value;

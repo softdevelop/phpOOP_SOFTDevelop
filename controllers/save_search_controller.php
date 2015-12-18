@@ -113,45 +113,6 @@ class save_search_controller extends main_controller
 		$this->display($options);
 	}
 
-	public function edit($id) 
-	{
-		$student = new student_model();
-		$record = $student->getRecord($id);
-		$this->setProperty('record',$record);
-		if(isset($_POST['btn_submit'])) {
-			$studentData = $_POST['data'][$this->controller];
-			if(!empty($studentData['fullname']))  {
-				if(isset($_FILES) and $_FILES["image"]["name"]) {
-					if(file_exists(RootURI."/media/upload/" .$this->controller.'/'.$record['photo']))
-						unlink(RootURI."/media/upload/" .$this->controller.'/'.$record['photo']);
-					$studentData['photo'] = $this->uploadImg($_FILES);
-				}
-				if($student->editRecord($id, $studentData))
-					header( "Location: ".html_helpers::url(array('ctl'=>'students')));
-			}
-		}
-		$this->display();
-	}
 	
-	public function view($id) 
-	{
-		$student = new student_model();
-		$record = $student->getRecord($id);
-		$this->setProperty('record',$record);
-		$this->display();
-	}
-	
-	public function del($id) 
-	{
-		$student = new student_model();
-		$record = $student->getRecord($id);
-		if(file_exists(RootURI."/media/upload/" .$this->controller.'/'.$record['photo']))
-			unlink(RootURI."/media/upload/" .$this->controller.'/'.$record['photo']);
-			
-		echo $student->delRecord($id);
-		exit();
-		//$student->delRecord($id);
-		//header( "Location: ".html_helpers::url(array('ctl'=>'students')));
-	}
 }
 ?>
